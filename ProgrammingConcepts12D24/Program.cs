@@ -29,14 +29,14 @@
                 Console.WriteLine(i);
             }
 
-            for(int i = 1; i < 10; i --)
-            {
-                //Console.WriteLine(i);
-                if (i ==int.MinValue)
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            //for(int i = 1; i < 10; i --)
+            //{
+            //    //Console.WriteLine(i);
+            //    if (i ==int.MinValue)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
             Console.WriteLine("END");
             for(int i = 1; i <= 3; i++)
             {
@@ -44,6 +44,71 @@
                 {
                     Console.WriteLine(i + " " + j);
                 }
+            }
+
+            // Indefinite / Condition Controlled iteration
+            int x = 0;
+            while (x < 10)
+            {
+                x++;
+            }
+            Console.WriteLine(x);
+            string userGuess = "";
+            while(userGuess != "a")
+            {
+                Console.Write("Enter a guess: ");
+                userGuess = Console.ReadLine();
+            }
+            //x = 10 (from previous loop)
+            do
+            {
+                x++;
+            } while (x < 10);
+            Console.WriteLine(x); //x = 11
+            while(x < 10)
+            {
+                x++ ;
+            }
+            Console.WriteLine(x);// x still = 11 
+            while (x > 10)
+            {
+                x++;
+            }
+            x = 11;
+            Console.WriteLine(x);
+            //while (x == 11)
+            //{
+            //    Console.WriteLine(x);
+            //}
+
+            // Selection
+            int userGuessNumber;
+            Console.Write("Enter a whole number: ");
+            userGuessNumber = Convert.ToInt32(Console.ReadLine());
+            if (userGuessNumber == 7)
+            {
+                Console.WriteLine("You guessed 7");
+            }else
+            {
+                Console.WriteLine("You didn't guess 7");
+            }
+
+            if (userGuessNumber == 8)
+            {
+                Console.WriteLine("You guessed 8");
+            }else if(userGuessNumber < 8)
+            {
+                Console.WriteLine("You guessed less than 8");
+            }
+            else
+            {
+                Console.WriteLine("You guessed more than 8");
+            }
+
+            bool iAmTrueOrFalse = true;
+            while (iAmTrueOrFalse)
+            {
+                iAmTrueOrFalse = false;
             }
         }
     }
